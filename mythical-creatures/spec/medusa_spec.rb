@@ -31,7 +31,7 @@ RSpec.describe Medusa do
     assert(victim.stoned?).to be true
   end
 
-  it 'can only have three victims' do
+  xit 'can only have three victims' do
     # your code here
   end
 
