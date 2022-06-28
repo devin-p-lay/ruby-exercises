@@ -29,11 +29,14 @@ class Hobbit
   def old?
     if @age > 100
       true
-    else false
     end
   end
 
   def has_ring?
     assign_ring_on_creation
   end
+
+  def is_short?
+    true
+  end 
 end
