@@ -5,13 +5,14 @@ class Vampire
   def initialize(name, pet = "bat")
     @name = name
     @pet = pet
+    @thirsty = true
   end
 
   def thirsty
-    true
+    @thirsty
   end
 
   def drink
-    thirsty = false
+    @thirsty = false
   end
 end
