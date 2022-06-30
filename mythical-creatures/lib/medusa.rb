@@ -8,7 +8,12 @@ class Medusa
   end
 
   def stare(victim)
+    victim.stoned
     @statues << victim
+    if @statues.count == 4
+      @statues[0].unstoned
+      @statues.shift
+    end
   end
 end
 
@@ -17,9 +22,18 @@ class Person
 
   def initialize(name)
     @name = name
+    @stoned = false
   end
 
   def stoned?
-    false
+    @stoned
+  end
+
+  def stoned
+    @stoned = true
+  end
+
+  def unstoned
+    @stoned = false
   end
 end
