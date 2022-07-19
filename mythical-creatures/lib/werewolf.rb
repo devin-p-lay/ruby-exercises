@@ -12,7 +12,7 @@ class Werewolf
   end
 
   def human?
-    @human
+    @human == true
   end
 
   def change!
@@ -25,10 +25,7 @@ class Werewolf
   end
 
   def wolf?
-    if @human == true
-      false
-    else true
-    end
+    @human != true
   end
 
   def hungry?
